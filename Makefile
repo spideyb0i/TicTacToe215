@@ -8,8 +8,7 @@ main.o: obj src/main.cpp inc/main.hpp
 board.o: obj src/board.cpp inc/board.hpp
 	$(CC) $(CFLAGS) -c src/board.cpp -o obj/board.o
 obj:
-	if[!-d "obj"];
-	then mkdir obj
+	mkdir -p obj
 clean:
 	rm -r obj
 	set EXE=
